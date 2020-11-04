@@ -19,14 +19,26 @@
         <b-button variant="outline-info">Nuevo ticket</b-button>
       </b-col>
     </b-row>
+    <b-row class="mt-3">
+      <b-col md="2">
+        <CardArea/>
+      </b-col>
+      <b-col md="10">
+        <CardList/>
+      </b-col>
+    </b-row>
   </div>
 </template>
 <script>
+import CardArea from '../components/CardArea'
+import CardList from '../components/CardList'
 /* import { ModelSelect } from 'vue-search-select' */
 export default {
-  /* components: {
-    ModelSelect
-  }, */
+  components: {
+    // ModelSelect
+    CardArea,
+    CardList
+  },
   data () {
     return {
       options: [

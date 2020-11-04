@@ -23,7 +23,7 @@
       </div>
       <div class="seccion-usuario">
         <div class="contenedor-notificaciones">
-          <button class="boton-notificaciones" @mouseover="verNotificacionesUsuario">
+          <button class="boton-notificaciones" @click="verNotificacionesUsuario">
             <img src="../assets/imagenes/iconos/icono-campana.svg" alt="">
             <div class="numero">2</div>
           </button>
