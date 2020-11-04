@@ -1,0 +1,7 @@
+<svg id="Componente_16_27" data-name="Componente 16 – 27" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <path id="Trazado_10416" data-name="Trazado 10416" d="M15,0A15,15,0,1,1,0,15,15,15,0,0,1,15,0Z" fill="#fff"/>
+  <g id="Grupo_7960" data-name="Grupo 7960" transform="translate(-663.512 -487.15)">
+    <path id="Trazado_10417" data-name="Trazado 10417" d="M684.442,510.676a1,1,0,0,1-.707-.293L671.8,498.451a1,1,0,1,1,1.414-1.414l11.93,11.932a1,1,0,0,1-.707,1.707Z" transform="translate(0 -1)" fill="#a4bed2"/>
+    <path id="Trazado_10418" data-name="Trazado 10418" d="M672.512,510.676a1,1,0,0,1-.707-1.707l11.93-11.932a1,1,0,1,1,1.414,1.414l-11.93,11.932A1,1,0,0,1,672.512,510.676Z" transform="translate(0 -1)" fill="#a4bed2"/>
+  </g>
+</svg>

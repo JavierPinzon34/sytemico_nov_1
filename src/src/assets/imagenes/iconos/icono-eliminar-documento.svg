@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="132.85" height="143.45" viewBox="0 0 132.85 143.45">
+  <g id="Grupo_8432" data-name="Grupo 8432" transform="translate(-600 -231.55)">
+    <path id="Trazado_10532" data-name="Trazado 10532" d="M66.425,0A66.425,66.425,0,1,1,0,66.425,66.425,66.425,0,0,1,66.425,0Z" transform="translate(600 231.55)" fill="#d1d5e9"/>
+    <g id="Grupo_503" data-name="Grupo 503" transform="translate(625 256)">
+      <path id="Trazado_109" data-name="Trazado 109" d="M3.126.782A3.086,3.086,0,0,0,0,3.908V104.149a1.126,1.126,0,0,0,1.172,1.172H82.264a1.126,1.126,0,0,0,1.172-1.172V30.874L57.644,0Z" fill="#fff" stroke="#f4f5f8" stroke-width="1"/>
+    </g>
+    <g id="Grupo_504" data-name="Grupo 504" transform="translate(682.839 256.781)">
+      <path id="Trazado_110" data-name="Trazado 110" d="M54.611,30.492H29.6V.4" transform="translate(-29.6 -0.4)" fill="#daedfd"/>
+    </g>
+    <g id="Grupo_505" data-name="Grupo 505" transform="translate(637.896 303.287)">
+      <rect id="Rectángulo_167" data-name="Rectángulo 167" width="59.598" height="2.345" fill="#daedfd" stroke="#daedfd" stroke-miterlimit="10" stroke-width="0.5"/>
+    </g>
+    <g id="Grupo_506" data-name="Grupo 506" transform="translate(637.896 321.069)">
+      <rect id="Rectángulo_168" data-name="Rectángulo 168" width="59.598" height="2.345" fill="#daedfd" stroke="#daedfd" stroke-miterlimit="10" stroke-width="0.5"/>
+    </g>
+    <g id="Grupo_507" data-name="Grupo 507" transform="translate(637.896 338.655)">
+      <rect id="Rectángulo_169" data-name="Rectángulo 169" width="59.598" height="2.345" fill="#daedfd" stroke="#daedfd" stroke-miterlimit="10" stroke-width="0.5"/>
+    </g>
+    <circle id="Elipse_37" data-name="Elipse 37" cx="18.172" cy="18.172" r="18.172" transform="translate(689.678 338.655)" fill="#e56c64"/>
+    <g id="Grupo_508" data-name="Grupo 508" transform="translate(700.455 349.157)">
+      <rect id="Rectángulo_170" data-name="Rectángulo 170" width="17.391" height="3.517" transform="matrix(0.666, -0.746, 0.746, 0.666, 0, 13.011)" fill="#fff"/>
+      <rect id="Rectángulo_171" data-name="Rectángulo 171" width="17.391" height="3.517" transform="matrix(-0.666, -0.746, 0.746, -0.666, 12.093, 15.31)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

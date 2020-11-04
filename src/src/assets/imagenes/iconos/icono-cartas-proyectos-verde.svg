@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="Grupo_8451" data-name="Grupo 8451" transform="translate(7032.631 2793)">
+    <g id="Grupo_4075" data-name="Grupo 4075" transform="translate(-8135.631 -2908)">
+      <g id="Trazado_265" data-name="Trazado 265" transform="translate(1103 115)" fill="#fff">
+        <path d="M 25 29.5 L 5 29.5 C 2.51869010925293 29.5 0.5 27.48130989074707 0.5 25 L 0.5 5 C 0.5 2.51869010925293 2.51869010925293 0.5 5 0.5 L 25 0.5 C 27.48130989074707 0.5 29.5 2.51869010925293 29.5 5 L 29.5 25 C 29.5 27.48130989074707 27.48130989074707 29.5 25 29.5 Z" stroke="none"/>
+        <path d="M 5 1 C 2.794389724731445 1 1 2.794389724731445 1 5 L 1 25 C 1 27.20561027526855 2.794389724731445 29 5 29 L 25 29 C 27.20561027526855 29 29 27.20561027526855 29 25 L 29 5 C 29 2.794389724731445 27.20561027526855 1 25 1 L 5 1 M 5 0 L 25 0 C 27.76141929626465 0 30 2.238580703735352 30 5 L 30 25 C 30 27.76141929626465 27.76141929626465 30 25 30 L 5 30 C 2.238580703735352 30 0 27.76141929626465 0 25 L 0 5 C 0 2.238580703735352 2.238580703735352 0 5 0 Z" stroke="none" fill="#39c5c8"/>
+      </g>
+      <g id="Rectángulo_885" data-name="Rectángulo 885" transform="translate(1108 120)" fill="#fff" stroke="#39c5c8" stroke-width="1">
+        <rect width="8" height="8" rx="0.25" stroke="none"/>
+        <rect x="0.5" y="0.5" width="7" height="7" rx="0.25" fill="none"/>
+      </g>
+      <g id="Rectángulo_887" data-name="Rectángulo 887" transform="translate(1108 132)" fill="#fff" stroke="#39c5c8" stroke-width="1">
+        <rect width="8" height="8" rx="0.25" stroke="none"/>
+        <rect x="0.5" y="0.5" width="7" height="7" rx="0.25" fill="none"/>
+      </g>
+      <g id="Rectángulo_886" data-name="Rectángulo 886" transform="translate(1120 120)" fill="#fff" stroke="#39c5c8" stroke-width="1">
+        <rect width="8" height="8" rx="0.25" stroke="none"/>
+        <rect x="0.5" y="0.5" width="7" height="7" rx="0.25" fill="none"/>
+      </g>
+      <g id="Rectángulo_888" data-name="Rectángulo 888" transform="translate(1120 132)" fill="#fff" stroke="#39c5c8" stroke-width="1">
+        <rect width="8" height="8" rx="0.25" stroke="none"/>
+        <rect x="0.5" y="0.5" width="7" height="7" rx="0.25" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
