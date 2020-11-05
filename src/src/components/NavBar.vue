@@ -5,21 +5,22 @@
         <img src="../assets/imagenes/logotipos/Logo-Grumpyturtle-Blanco.svg" alt="">
         <img class="imgagen-wapps" src="../assets/imagenes/iconos/Icon-wapps-pradek-default.svg" alt="">
       </div>
+      <!-- menus de navegacion -->
       <div class="seccion-menu">
-        <button class="boton-opcion">
-            <!-- <div class="icono">
+        <!-- <button class="boton-opcion">
+            <div class="icono">
                 <img src="../assets/imagenes/iconos/icono-proyectos.svg" alt="">
                 <img src="../assets/imagenes/iconos/icono-proyectos-azul.svg" alt="">
             </div>
-            <span>Proyectos</span> -->
+            <span>Proyectos</span>
         </button>
         <button class="boton-opcion">
-            <!-- <div class="icono">
+            <div class="icono">
                 <img src="../assets/imagenes/iconos/icono-actividades.svg" alt="">
                 <img src="../assets/imagenes/iconos/icono-actividades-azul.svg" alt="">
             </div>
-            <span>Actividades</span> -->
-        </button>
+            <span>Actividades</span>
+        </button> -->
       </div>
       <div class="seccion-usuario">
         <div class="contenedor-notificaciones">

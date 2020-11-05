@@ -1,4 +1,5 @@
 <template>
+  <!-- card para mostrar tickets -->
   <div class="contenedor-elemento">
     <div class="fila-proyecto" :class="{'fila-amarilla': item.text == 'Pendiente', 'fila-roja': item.text == 'Atrasado', 'fila-tinto': item.text == 'Olvidado', 'fila-morado': item.text == 'Cerrado', 'fila-verde': item.text == 'Cerrado ok'}" >
       <div class="barra-lateral">
@@ -50,7 +51,7 @@ export default {
 <style lang="scss">
 .contenedor-elemento {
   border: 1px solid #f9f7f7;
-
+  // clases generales y colores por defecto
   .fila-proyecto {
     width: 100%;
     height: 80px;
@@ -60,7 +61,6 @@ export default {
     border-radius: 0;
     background: transparent;
     display: flex;
-
     .barra-lateral {
       width: 20px;
       height: 80px;
@@ -72,7 +72,6 @@ export default {
       display: flex;
       align-items: center;
       justify-content: center;
-
       img {
         width: 8px;
         height: 15px;
@@ -83,7 +82,6 @@ export default {
         background: transparent;
       }
     }
-
     .codigo-proyecto {
       width: 55px;
       height: 80px;
@@ -94,14 +92,12 @@ export default {
       display: flex;
       align-items: center;
       justify-content: center;
-
       span {
         color: #354861;
         font-size: 12px;
         font-weight: 600;
       }
     }
-
     .contenedor-descripcion {
       width: 450px;
       height: 80px;
@@ -111,13 +107,11 @@ export default {
       border-radius: 0;
       background-color: #FFFFFF;
       position: relative;
-
       .contenedor-tooltip {
         position: absolute;
         top: 30px;
         left: 60px;
       }
-
       .nombre-proyecto {
         width: 100%;
         height: auto;
@@ -132,7 +126,6 @@ export default {
         color: #354861;
         text-align: left;
       }
-
       .descripcion-proyecto {
         width: 100%;
         height: auto;
@@ -146,17 +139,14 @@ export default {
         font-weight: 300;
         color: #484848;
         text-align: left;
-
         .badge {
           width: 42px;
           height: 17px;
           padding-top: 3px;
           margin-right: 5px;
-
           .b-icon.bi {
             color: #39C5C8;
           }
-
           span {
             font-size: 12px;
             font-weight: 300;
@@ -165,7 +155,6 @@ export default {
         }
       }
     }
-
     .contenedor-prioridad {
       width: 135px;
       height: 80px;
@@ -176,14 +165,12 @@ export default {
       display: flex;
       align-items: center;
       justify-content: center;
-
       span {
         color: #464E5A;
         font-size: 12px;
         font-weight: 500;
       }
     }
-
     .contenedor-estado {
       width: 134px;
       min-width: 134px;
@@ -193,7 +180,6 @@ export default {
       border: 0;
       border-radius: 0;
       background-color: #FFFFFF;
-
       .estado {
         width: 100%;
         height: auto;
@@ -203,7 +189,6 @@ export default {
         border-radius: 0;
         background: transparent;
         display: flex;
-
         .informacion-estado {
           width: 100%;
           height: auto;
@@ -212,7 +197,6 @@ export default {
           border: 0;
           border-radius: 0;
           background: transparent;
-
           .badge-estado {
             width: 100%;
             height: auto;
@@ -222,7 +206,6 @@ export default {
             border-radius: 0;
             background: transparent;
             text-align: center;
-
             .badge {
               background-color: #0291EB;
               font-size: 12px;
@@ -233,7 +216,6 @@ export default {
               padding-top: 4px;
             }
           }
-
           .hora-estado {
             width: 100%;
             height: auto;
@@ -248,36 +230,13 @@ export default {
             text-align: center;
             position: relative;
             bottom: 2px;
-
             a {
               color: #0291EB;
             }
           }
         }
       }
-
-      // parte inferior del cards secion del avatar
-      .barra-progreso {
-        width: 100%;
-        height: 6px;
-        margin: 15px 0 0 0;
-        padding: 0;
-        border: 0;
-        border-radius: 2px;
-        background-color: #F4F5F8;
-
-        .progreso {
-          width: 50%;
-          height: 6px;
-          margin: 0;
-          padding: 0;
-          border: 0;
-          border-radius: 2px;
-          background-color: #0291EB;
-        }
-      }
     }
-
     .contenedor-fecha {
       width: 134px;
       min-width: 134px;
@@ -287,7 +246,6 @@ export default {
       border: 0;
       border-radius: 0;
       background-color: #FFFFFF;
-
       .fecha {
         width: 100%;
         height: auto;
@@ -297,7 +255,6 @@ export default {
         border-radius: 0;
         background: transparent;
         display: flex;
-
         .informacion-fecha {
           width: 100%;
           height: auto;
@@ -306,7 +263,6 @@ export default {
           border: 0;
           border-radius: 0;
           background: transparent;
-
           .badge-fecha {
             width: 100%;
             height: auto;
@@ -316,7 +272,6 @@ export default {
             border-radius: 0;
             background: transparent;
             text-align: center;
-
             .badge {
               background-color: #F5F9FF;
               font-size: 12px;
@@ -325,7 +280,6 @@ export default {
               width: 80px;
               height: 17px;
               padding-top: 3px;
-
               img {
                 width: 8px;
                 height: 10px;
@@ -334,7 +288,6 @@ export default {
               }
             }
           }
-
           .badge-hora {
             width: 100%;
             height: auto;
@@ -344,7 +297,6 @@ export default {
             border-radius: 0;
             background: transparent;
             text-align: center;
-
             .badge {
               background-color: #F5F9FF;
               font-size: 12px;
@@ -353,7 +305,6 @@ export default {
               width: 80px;
               height: 17px;
               padding-top: 3px;
-
               img {
                 display: inline-block;
                 vertical-align: unset;
@@ -361,111 +312,6 @@ export default {
                 height: 10px;
               }
             }
-          }
-        }
-      }
-
-      // parte inferior del cards secion del avatar
-      .barra-progreso {
-        width: 100%;
-        height: 6px;
-        margin: 15px 0 0 0;
-        padding: 0;
-        border: 0;
-        border-radius: 2px;
-        background-color: #F4F5F8;
-
-        .progreso {
-          width: 50%;
-          height: 6px;
-          margin: 0;
-          padding: 0;
-          border: 0;
-          border-radius: 2px;
-          background-color: #34ACE0;
-        }
-      }
-    }
-
-    .contenedor-opciones-proyectos {
-      width: 70px;
-      height: 80px;
-      margin: 0;
-      padding: 0;
-      border: 0;
-      border-radius: 0;
-      background-color: #FFFFFF;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-
-      // boton de puntos derecha
-      .boton-opciones {
-        width: 36px;
-        height: 36px;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        border-radius: 50%;
-        background: transparent;
-
-        img {
-          width: auto;
-          height: auto;
-          margin: 0;
-          padding: 0;
-          border: 0;
-          border-radius: 0;
-          background: transparent;
-          pointer-events: none;
-        }
-      }
-
-      .contenedor-opciones {
-        width: 150px;
-        height: 0px;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        border-radius: 10px;
-        background: transparent;
-        box-shadow: 0px 3px 6px #00000029;
-        overflow: hidden;
-        position: absolute;
-        top: 50px;
-        right: 40px;
-        z-index: 10;
-        transition: all 0.3s;
-
-        .boton-opcion {
-          width: 100%;
-          height: 40px;
-          margin: 0;
-          padding: 0 0 0 20px;
-          border: 0;
-          border-radius: 0;
-          background-color: #FFFFFF;
-          font-family: 'Mulish', sans-serif;
-          font-size: 14px;
-          font-weight: 600;
-          color: #484848;
-          display: flex;
-          align-items: center;
-          transition: all 0.3s;
-
-          img {
-            width: 18px;
-            height: 15px;
-            margin: 0 10px 0 0;
-            padding: 0;
-            border: 0;
-            border-radius: 0;
-            background: transparent;
-          }
-
-          &:hover {
-            background-color: #F2F3F9;
           }
         }
       }
@@ -477,7 +323,6 @@ export default {
     .barra-lateral {
       background-color: #EB3637;
     }
-
     .contenedor-estado {
       .estado {
         .informacion-estado {
@@ -495,12 +340,10 @@ export default {
       }
     }
   }
-
   .fila-proyecto.fila-amarilla {
     .barra-lateral {
       background-color: #FCA213;
     }
-
     .contenedor-estado {
       .estado {
         .informacion-estado {
@@ -518,12 +361,10 @@ export default {
       }
     }
   }
-
   .fila-proyecto.fila-tinto {
     .barra-lateral {
       background-color: #740000;
     }
-
     .contenedor-estado {
       .estado {
         .informacion-estado {
@@ -541,7 +382,6 @@ export default {
       }
     }
   }
-
   .fila-proyecto.fila-morado {
     .barra-lateral {
       background-color: #A6AAB2;
@@ -612,7 +452,6 @@ export default {
       }
     }
   }
-
   .fila-proyecto.fila-verde {
     .barra-lateral {
       background-color: #A6AAB2;

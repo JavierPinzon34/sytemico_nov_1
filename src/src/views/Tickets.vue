@@ -3,12 +3,7 @@
     <b-row class="search_tickets">
       <b-col md="3"></b-col>
       <b-col md="5" class="contenedor-menu-segundario">
-        <!-- <model-select
-          class="select_content"
-          :options="options"
-          v-model="item"
-          placeholder="Buscar ticket"
-        /> -->
+        <!-- buscador de ticket -->
         <div class="contenedor-buscador">
           <div class="buscador">
             <input type="search" placeholder="Buscar...">
@@ -16,6 +11,7 @@
           </div>
         </div>
       </b-col>
+      <!-- Boton crear nuevo ticket -->
       <b-col md="4" class="text-right">
         <b-button variant="outline-info" @click="showModal()">Nuevo ticket</b-button>
       </b-col>
@@ -67,9 +63,9 @@ export default {
   .tickets {
     background-color: #F8F9FC;
     padding: 15px;
-    // height: 100%;
     min-height: 658px;
     .search_tickets{
+      // clases para el encabezado de la pagina
       .contenedor-menu-segundario {
         width: 100%;
         height: auto;
@@ -79,7 +75,6 @@ export default {
         border-radius: 0;
         background: transparent;
         display: flex;
-
         .contenedor-buscador {
           width: 300px;
           height: 100%;
@@ -90,7 +85,6 @@ export default {
           background: transparent;
           display: flex;
           align-items: center;
-
           .buscador {
             width: auto;
             height: auto;
@@ -100,7 +94,6 @@ export default {
             border-radius: 0;
             background: transparent;
             position: relative;
-
             input {
               width: 222px;
               height: 29px;
@@ -109,7 +102,6 @@ export default {
               border: 1px solid #D1D5E9;
               border-radius: 5px;
               background-color: #FFFFFF;
-
               &::placeholder {
                 font-family: 'Mulish', sans-serif;
                 font-size: 14px;
@@ -117,7 +109,6 @@ export default {
                 color: #A6AAB2;
               }
             }
-
             img {
               width: 16px;
               height: 17px;
@@ -139,12 +130,10 @@ export default {
         padding: 2px;
         color: #00B8BD;
         border: 1px solid #00B8BD;
-
         &:hover{
           color: white;
         }
       }
     }
   }
-
 </style>

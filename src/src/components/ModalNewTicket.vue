@@ -1,5 +1,6 @@
 <template>
  <b-modal id="modal-1" title="BootstrapVue" size="lg" hide-footer hide-header>
+   <!-- modal para crear nuevo ticket -->
     <div class="contenido-modal">
       <div class="contenido-header">
         <div class="icono">
@@ -137,7 +138,6 @@ export default {
       .contenido-modal {
         background: #FFFFFF;
         border-radius: 10px 100px 10px 10px;
-
         .contenido-header {
           display: flex;
           padding: 14px;
@@ -145,7 +145,6 @@ export default {
             height: 49.45px;
             width: auto;
             margin: 8px;
-
           }
           .titulo {
             height: 49.45px;
@@ -159,7 +158,6 @@ export default {
             font-weight: 600;
           }
         }
-
         .contenido-body {
           padding: 14px;
           margin: 8px 15px 8px 8px;
@@ -260,7 +258,6 @@ export default {
             color: #464E5A;
           }
         }
-
         .contenido-adjuntar {
           background-color: #F8F9FC;
           padding-top: 15px;
@@ -322,9 +319,7 @@ export default {
             }
           }
         }
-
         .encabezado {
-          // width: 100%;
           height: 77px;
           right: 0;
           top: 0;
@@ -334,7 +329,6 @@ export default {
           border-radius: 0;
           background: transparent;
           position: absolute;
-
           h2 {
             width: 100%;
             height: 100%;
@@ -352,7 +346,6 @@ export default {
             align-items: center;
             justify-content: center;
           }
-
           .boton-cerrar {
             width: 30px;
             height: 30px;
@@ -367,7 +360,6 @@ export default {
             position: absolute;
             top: 14px;
             right: 17px;
-
             img {
               width: 30px;
               height: 30px;
