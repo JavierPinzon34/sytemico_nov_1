@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-Mesa_de_trabajo_22">
+      <rect width="20" height="20"/>
+    </clipPath>
+  </defs>
+  <g id="Mesa_de_trabajo_22" data-name="Mesa de trabajo – 22" clip-path="url(#clip-Mesa_de_trabajo_22)">
+    <g id="Grupo_8728" data-name="Grupo 8728" transform="translate(0 0.3)">
+      <ellipse id="Elipse_11" data-name="Elipse 11" cx="2.224" cy="2.181" rx="2.224" ry="2.181" fill="#151f29"/>
+      <ellipse id="Elipse_12" data-name="Elipse 12" cx="2.224" cy="2.181" rx="2.224" ry="2.181" transform="translate(0 7.477)" fill="#151f29"/>
+      <ellipse id="Elipse_13" data-name="Elipse 13" cx="2.224" cy="2.181" rx="2.224" ry="2.181" transform="translate(0 14.954)" fill="#151f29"/>
+      <ellipse id="Elipse_11-2" data-name="Elipse 11" cx="2.224" cy="2.181" rx="2.224" ry="2.181" transform="translate(7.62)" fill="#151f29"/>
+      <ellipse id="Elipse_12-2" data-name="Elipse 12" cx="2.224" cy="2.181" rx="2.224" ry="2.181" transform="translate(7.62 7.477)" fill="#151f29"/>
+      <ellipse id="Elipse_13-2" data-name="Elipse 13" cx="2.224" cy="2.181" rx="2.224" ry="2.181" transform="translate(7.62 14.954)" fill="#151f29"/>
+      <ellipse id="Elipse_11-3" data-name="Elipse 11" cx="2.224" cy="2.181" rx="2.224" ry="2.181" transform="translate(15.552)" fill="#151f29"/>
+      <ellipse id="Elipse_12-3" data-name="Elipse 12" cx="2.224" cy="2.181" rx="2.224" ry="2.181" transform="translate(15.552 7.477)" fill="#151f29"/>
+      <ellipse id="Elipse_13-3" data-name="Elipse 13" cx="2.224" cy="2.181" rx="2.224" ry="2.181" transform="translate(15.552 14.954)" fill="#151f29"/>
+    </g>
+  </g>
+</svg>

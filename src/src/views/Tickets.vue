@@ -1,7 +1,8 @@
 <template>
   <div class="tickets">
     <b-row class="search_tickets">
-      <b-col class="contenedor-menu-segundario">
+      <b-col md="3"></b-col>
+      <b-col md="5" class="contenedor-menu-segundario">
         <!-- <model-select
           class="select_content"
           :options="options"
@@ -15,29 +16,33 @@
           </div>
         </div>
       </b-col>
-      <b-col class="text-right">
-        <b-button variant="outline-info">Nuevo ticket</b-button>
+      <b-col md="4" class="text-right">
+        <b-button variant="outline-info" @click="showModal()">Nuevo ticket</b-button>
       </b-col>
     </b-row>
     <b-row class="mt-3">
-      <b-col md="2">
+      <b-col md="3">
         <CardArea/>
       </b-col>
-      <b-col md="10">
+      <b-col md="9">
         <CardList/>
       </b-col>
     </b-row>
+    <ModalNewTicket/>
   </div>
 </template>
 <script>
 import CardArea from '../components/CardArea'
 import CardList from '../components/CardList'
+import EventBus from '../bus'
+import ModalNewTicket from '../components/ModalNewTicket'
 /* import { ModelSelect } from 'vue-search-select' */
 export default {
   components: {
     // ModelSelect
     CardArea,
-    CardList
+    CardList,
+    ModalNewTicket
   },
   data () {
     return {
@@ -50,6 +55,11 @@ export default {
         text: ''
       }
     }
+  },
+  methods: {
+    showModal () {
+      EventBus.$emit('show-modal')
+    }
   }
 }
 </script>
@@ -57,6 +67,8 @@ export default {
   .tickets {
     background-color: #F8F9FC;
     padding: 15px;
+    // height: 100%;
+    min-height: 658px;
     .search_tickets{
       .contenedor-menu-segundario {
         width: 100%;
@@ -72,7 +84,7 @@ export default {
           width: 300px;
           height: 100%;
           margin: 0;
-          padding: 0 0 0 260px;
+          padding: 0 0 0 15px;
           border: 0;
           border-radius: 0;
           background: transparent;

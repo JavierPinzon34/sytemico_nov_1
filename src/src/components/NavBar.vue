@@ -3,7 +3,7 @@
     <div class="contenedor-menu-principal">
       <div class="seccion-logotipo">
         <img src="../assets/imagenes/logotipos/Logo-Grumpyturtle-Blanco.svg" alt="">
-        <b-icon-grid3x3-gap-fill scale="2"/>
+        <img class="imgagen-wapps" src="../assets/imagenes/iconos/Icon-wapps-pradek-default.svg" alt="">
       </div>
       <div class="seccion-menu">
         <button class="boton-opcion">
@@ -101,8 +101,8 @@ export default {
       display: flex;
       align-items: center;
 
-      .b-icon.bi {
-        color: #151F29;
+      .imgagen-wapps {
+        // color: #151F29;
         margin-left: 30px;
       }
     }
