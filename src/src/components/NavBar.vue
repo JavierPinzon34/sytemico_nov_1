@@ -7,20 +7,31 @@
       </div>
       <!-- menus de navegacion -->
       <div class="seccion-menu">
-        <!-- <button class="boton-opcion">
+        <router-link class="boton-opcion" to="/">
             <div class="icono">
-                <img src="../assets/imagenes/iconos/icono-proyectos.svg" alt="">
-                <img src="../assets/imagenes/iconos/icono-proyectos-azul.svg" alt="">
+                <img src="../assets/imagenes/iconos/Icon-tickets-default.svg" alt="">
+                <img src="../assets/imagenes/iconos/Icon-tickets-activo.svg" alt="">
             </div>
-            <span>Proyectos</span>
+            <span>Tickets</span>
+        </router-link>
+        <button class="boton-opcion opcion-select" v-on:click="verOpcionesMenu" :to="{ name: '/'}">
+          <div class="icono">
+            <img src="../assets/imagenes/iconos/Icon-administrar-default.svg" alt="">
+          </div>
+          <span>Administrar</span>
+          <b-icon icon="caret-down-fill" class="icono-select"></b-icon>
+          <div class="contenedor-tooltip"></div>
+          <div class="contenedor-opciones">
+            <button class="boton-opcion">
+              <img src="../assets/imagenes/iconos/icono-proyectos-azul.svg" alt="">
+              Proyecto
+            </button>
+            <button class="boton-opcion">
+              <img src="../assets/imagenes/iconos/icono-actividades-azul.svg" alt="">
+              Actividades
+            </button>
+          </div>
         </button>
-        <button class="boton-opcion">
-            <div class="icono">
-                <img src="../assets/imagenes/iconos/icono-actividades.svg" alt="">
-                <img src="../assets/imagenes/iconos/icono-actividades-azul.svg" alt="">
-            </div>
-            <span>Actividades</span>
-        </button> -->
       </div>
       <div class="seccion-usuario">
         <div class="contenedor-notificaciones">
@@ -52,18 +63,24 @@
           <span>revecasilver@mail.com</span>
         </div>
         <div class="contenedor-opciones-usuarios">
-          <button class="boton-opciones"></button>
+          <button class="boton-opciones" @click="verOpcionesUsuario"></button>
           <div class="contenedor-opciones">
-            <button class="boton-opcion">Opciones</button>
+            <button class="boton-opcion" @click="showModalProfile">Perfil</button>
             <button class="boton-opcion">Salir</button>
           </div>
         </div>
     </div>
+    <ModalProfile/>
   </div>
   </div>
 </template>
 <script>
+import EventBus from '../bus'
+import ModalProfile from '../components/ModalEditProfile'
 export default {
+  components: {
+    ModalProfile
+  },
   methods: {
     verNotificacionesUsuario: function () {
       // console.log('hola')
@@ -76,6 +93,32 @@ export default {
       } else {
         opciones.removeAttribute('style')
       }
+    },
+    verOpcionesUsuario: function () {
+      var opciones = event.target.nextElementSibling
+      var alto = opciones.children.length * 45
+
+      if (opciones.clientHeight === 0) {
+        opciones.style.height = alto + 'px'
+      } else {
+        opciones.removeAttribute('style')
+      }
+    },
+    verOpcionesMenu: function () {
+      var opciones = event.target.children[4]
+      var tooltip = event.target.children[3]
+      var alto = opciones.children.length * 45
+
+      if (opciones.clientHeight === 0) {
+        opciones.style.height = alto + 'px'
+        tooltip.style.opacity = 0
+      } else {
+        opciones.removeAttribute('style')
+        tooltip.removeAttribute('style')
+      }
+    },
+    showModalProfile () {
+      EventBus.$emit('show-modal-profile')
     }
   }
 }
@@ -109,80 +152,178 @@ export default {
     }
 
     .seccion-menu {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      border: 0;
-      border-radius: 0;
-      background: transparent;
-      display: flex;
-      justify-content: center;
-
-      .boton-opcion {
-        width: auto;
-        max-width: 200px;
+        width: 100%;
         height: 100%;
         margin: 0;
-        padding: 0 20px;
+        padding: 0;
         border: 0;
         border-radius: 0;
         background: transparent;
         display: flex;
-        align-items: center;
+        justify-content: center;
 
-        .icono {
-          width: 18px;
-          height: 15px;
-          margin: 0 8px 0 0;
-          padding: 0;
-          border: 0;
-          border-radius: 0;
-          background: transparent;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-          bottom: 1px;
-
-          img {
-            width: 18px;
-            height: 15px;
+        .boton-opcion {
+            width: auto;
+            max-width: 200px;
+            height: 100%;
             margin: 0;
-            padding: 0;
+            padding: 0 20px;
             border: 0;
             border-radius: 0;
             background: transparent;
-          }
+            display: flex;
+            align-items: center;
 
-          & > :nth-child(2) {
-            display: none;
-          }
+            .icono {
+                width: 18px;
+                height: 15px;
+                margin: 0 8px 0 0;
+                padding: 0;
+                border: 0;
+                border-radius: 0;
+                background: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                bottom: 1px;
+
+                img {
+                    width: 18px;
+                    height: 15px;
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    border-radius: 0;
+                    background: transparent;
+                }
+
+                & > :nth-child(2) {
+                    display: none;
+                }
+            }
+
+            span {
+                width: auto;
+                height: auto;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                border-radius: 0;
+                background: transparent;
+                font-family: 'Mulish', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                color: #FFFFFF;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                transition: all 0.3s;
+                pointer-events: none;
+            }
+
+            &:hover {
+                background-color: #24303D;
+            }
         }
 
-        span {
-          width: auto;
-          height: auto;
-          margin: 0;
-          padding: 0;
-          border: 0;
-          border-radius: 0;
-          background: transparent;
-          font-family: 'Mulish', sans-serif;
-          font-size: 14px;
-          font-weight: 400;
-          color: #FFFFFF;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          transition: all 0.3s;
-          pointer-events: none;
+        .boton-opcion.router-link-exact-active {
+            background-color: #FFFFFF;
+
+            .icono {
+                & > :nth-child(1) {
+                  display: none;
+                }
+
+                & > :nth-child(2) {
+                  display: block;
+                }
+            }
+
+            span {
+                color: #099FCE;
+            }
         }
 
-        &:hover {
-          background-color: #24303D;
+        .boton-opcion.opcion-select {
+            max-width: 280px;
+            padding: 0 40px 0 20px;
+            position: relative;
+
+            .icono-select {
+                width: 10px;
+                height: 10px;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                border-radius: 0;
+                background: transparent;
+                color: #FFFFFF;
+                position: absolute;
+                right: 20px;
+                pointer-events: none;
+            }
+
+            .contenedor-tooltip {
+              position: absolute;
+              top: 50px;
+              left: 35%;
+            }
+
+            .contenedor-opciones {
+                width: 150px;
+                height: 0px;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                border-radius: 10px;
+                background: transparent;
+                box-shadow: 0px 3px 6px #00000029;
+                overflow: hidden;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                z-index: 100;
+                transition: all 0.3s;
+
+                .boton-opcion {
+                    width: 100%;
+                    height: 45px;
+                    margin: 0;
+                    padding: 0 0 0 20px;
+                    border: 0;
+                    border-radius: 0;
+                    background-color: #FFFFFF;
+                    font-family: 'Mulish', sans-serif;
+                    font-size: 15px;
+                    font-weight: 600;
+                    color: #484848;
+                    display: flex;
+                    align-items: center;
+                    transition: all 0.3s;
+
+                    img {
+                        width: 18px;
+                        height: 15px;
+                        margin: 0 10px 0 0;
+                        padding: 0;
+                        border: 0;
+                        border-radius: 0;
+                        background: transparent;
+                    }
+
+                    &:hover {
+                        background-color: #F2F3F9;
+                    }
+                }
+            }
+
+            &:hover {
+                .contenedor-tooltip {
+                    opacity: 1;
+                }
+            }
         }
-      }
     }
 
     .seccion-usuario {
@@ -376,8 +517,9 @@ export default {
           box-shadow: 0px 3px 6px #00000029;
           overflow: hidden;
           position: absolute;
-          top: 60px;
+          top: 53px;
           right: 0;
+          z-index: 100;
           transition: all 0.3s;
 
           .boton-opcion {

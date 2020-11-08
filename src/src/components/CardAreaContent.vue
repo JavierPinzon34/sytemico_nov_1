@@ -5,7 +5,7 @@
         <b-card-text class="title_text"><span>Soporte</span> </b-card-text>
       </b-col>
       <b-col>
-        <b-card-text class="body_text"><b-badge pill variant="light"><b-icon-tag-fill/> <span>100</span></b-badge></b-card-text>
+        <b-card-text class="body_text"><b-badge pill variant="light"><img src="../assets/imagenes/iconos/Icon-tickets-contador.svg" alt=""> <span>100</span></b-badge></b-card-text>
       </b-col>
     </b-row>
   </b-card>

@@ -53,7 +53,7 @@ export default {
     }
   },
   methods: {
-    showModal () {
+    showModal () { // evento para abrir la modal de nuevo ticket
       EventBus.$emit('show-modal')
     }
   }

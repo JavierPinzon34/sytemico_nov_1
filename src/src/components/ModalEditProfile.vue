@@ -1,5 +1,5 @@
 <template>
- <b-modal id="modal-1" title="BootstrapVue" size="lg" hide-footer hide-header>
+ <b-modal id="modal-profile" title="BootstrapVue" size="md" hide-footer hide-header>
    <!-- modal para crear nuevo ticket -->
     <div class="contenido-modal">
       <div class="contenido-header">
@@ -7,76 +7,74 @@
           <img src="../assets/imagenes/iconos/Icono-modal.svg" alt="">
         </div>
         <div class="titulo">
-          Crear nuevo ticket
+          Editar perfil
         </div>
       </div>
       <div class="contenido-body">
-        <div class="codigo">
-          T0001
-        </div>
         <div class="form-datos">
           <b-form-group
             id="groupname"
-            label="Nombre completo del usuario"
-            label-for="name"
+            label="Contraseña actual"
+            label-for="password"
           >
-            <b-form-input id="name" v-model="name" placeholder="Samantha Garner"/>
+            <b-form-input
+              id="password"
+              v-model="password"
+              type="password"
+              />
           </b-form-group>
           <b-form-group
-            id="groupemail"
-            label="Email"
-            label-for="email"
+            id="groupname"
+            label="Nueva contraseña"
+            label-for="new-password"
           >
-            <b-form-input id="imal" v-model="email" placeholder="samanthagarner@mail.com"/>
+            <b-form-input
+              id="new-password"
+              v-model="new_password"
+              type="password"
+              />
           </b-form-group>
-        </div>
-        <div class="contenido-asunto">
-          <model-select
-            :options="options1"
-            v-model="item1"
-            placeholder="Asunto"
-          />
-          <h5>Sincronización de mis archivos con la plataforma</h5>
-        </div>
-        <div class="contenido-prioridad">
-          <model-select
-            :options="options2"
-            v-model="item2"
-            placeholder="Prioridad"
-          />
-          <h5>Alta <span>(Tiempo promedio de respuesta: 4 horas)</span></h5>
-        </div>
-        <div class="comentario">
-          <b-form-textarea
-            id="textarea"
-            v-model="text"
-            rows="5"
-            max-rows="5"
-          />
+          <b-form-group
+            id="groupname"
+            label="Confirmar nueva contraseña"
+            label-for="confirm-password"
+          >
+            <b-form-input
+              id="confirm-password"
+              v-model="confirm_password"
+              type="password"
+              />
+          </b-form-group>
         </div>
       </div>
       <div class="contenido-adjuntar">
         <div class="titulo-adjuntar">
           <b-row class="contenedor-titulo">
             <b-col md="6">
-              <span>Adjuntar archivo</span>
+              <span>Imagen de perfil</span>
             </b-col>
             <b-col md="6" class="text-right">
-              <b-button variant="outline-info">Adjuntar</b-button>
+              <b-button variant="outline-info" @click="changeFoto">Adjuntar</b-button>
             </b-col>
           </b-row>
-          <b-progress :value="value" max="100" class="mb-3"></b-progress>
-        </div>
-        <div class="archivo-adjunto">
-          <div class="adjunto">
-            archivo_adjunto2.jpg
+          <div v-if="!foto" class="content-adjunto">
+            <div class="icono-adjunto">
+              <img src="../assets/imagenes/iconos/Img-perfil-adjuntar.svg" alt="">
+            </div>
+            <div class="texto-adjunto">
+              <span>Ajuntar una fotografia como imagen de perfil</span>
+            </div>
           </div>
+        </div >
+        <div
+          v-if="foto"
+          class="archivo-adjunto">
           <div class="adjunto">
-            archivo_adjunto1.jpg
+            mifotodeperfil.jpg
           </div>
         </div>
         <div class="text-center boton-crear">
-          <b-button variant="info">Crear</b-button>
+          <b-button variant="info">Editar</b-button>
         </div>
       </div>
       <div class="encabezado">
@@ -88,42 +86,32 @@
   </b-modal>
 </template>
 <script>
-// importamos el bus para ejecutar eventos globales
 import EventBus from '../bus'
-import { ModelSelect } from 'vue-search-select'
 export default {
-  components: {
-    ModelSelect
-  },
   data () {
     return {
-      name: '',
-      email: '',
-      text: 'Hola, es necesario dar respuesta al cliente debido a',
-      item1: '',
-      item2: '',
-      options1: [
-        { value: '1', text: 'Baja' },
-        { value: '2', text: 'Media' },
-        { value: '3', text: 'Alta' }
-      ],
-      options2: [
-        { value: '1', text: 'Baja' },
-        { value: '2', text: 'Media' },
-        { value: '3', text: 'Alta' }
-      ],
-      value: 60
+      confirm_password: '',
+      password: '',
+      new_password: '',
+      foto: true
     }
   },
   methods: {
     hideModal () {
-      this.$bvModal.hide('modal-1')
+      this.$bvModal.hide('modal-profile')
+    },
+    changeFoto () { // cambiar el diseño del a modal
+      if (this.foto === true) {
+        this.foto = false
+      } else {
+        this.foto = true
+      }
     }
   },
   created () {
-    // creamos el evento para abrir la modal de crear nuevo ticket
-    EventBus.$on('show-modal', () => {
-      this.$bvModal.show('modal-1')
+    // se crea el evento que abre la modal
+    EventBus.$on('show-modal-profile', () => {
+      this.$bvModal.show('modal-profile')
     })
   }
 }
@@ -163,12 +151,6 @@ export default {
         .contenido-body {
           padding: 14px;
           margin: 8px 15px 8px 8px;
-          .codigo {
-            padding-left: 14px;
-            font-size: 12px;
-            color: #0291EB;
-            font-weight: 700;
-          }
           .form-datos {
             margin-top: 15px;
             margin-bottom: 25px;
@@ -188,91 +170,16 @@ export default {
               }
             }
           }
-          .contenido-asunto {
-            display: flex;
-            margin-bottom: 10px;
-            .ui.selection.dropdown {
-              width: 109px;
-              height: 30px;
-              padding: 7px;
-              .text {
-                width: 100%;
-                text-align: left;
-                color: #464E5A;
-                font-size: 12px;
-                font-weight: 400;
-              }
-            }
-            .ui.fluid.dropdown>.dropdown.icon {
-              padding: 7px;
-              color: #A6AAB2;
-            }
-            .ui.search.selection.dropdown>input.search {
-              width: 109px;
-              height: 30px;
-            }
-            h5 {
-              font-size: 14px;
-              color: #464E5A;
-              margin-left: 20px;
-              padding-top: 6px;
-              font-weight: bold;
-            }
-          }
-          .contenido-prioridad {
-            display: flex;
-            margin-bottom: 20px;
-            .ui.selection.dropdown {
-              width: 109px;
-              height: 30px;
-              padding: 7px;
-              .text {
-                width: 100%;
-                text-align: left;
-                color: #464E5A;
-                font-size: 12px;
-                font-weight: 400;
-              }
-            }
-            .ui.fluid.dropdown>.dropdown.icon {
-              padding: 7px;
-              color: #A6AAB2;
-            }
-            .ui.search.selection.dropdown>input.search {
-              width: 109px;
-              height: 30px;
-            }
-            h5 {
-              font-size: 14px;
-              color: #464E5A;
-              margin-left: 20px;
-              padding-top: 6px;
-              font-weight: bold;
-              span {
-                font-size: 12px;
-                color: #A6AAB2;
-                margin-left: 10px;
-                font-weight: 400;
-              }
-            }
-          }
-          .comentario {
-            margin-bottom: 15px;
-            box-shadow: 0px 3px 6px #00000014;
-            border: 1px solid #00B8BD;
-            border-radius: 5px;
-            font-size: 14px;
-            color: #464E5A;
-          }
         }
         .contenido-adjuntar {
           background-color: #F8F9FC;
           padding-top: 15px;
-          padding-bottom: 40px;
+          padding-bottom: 50px !important;
           border-radius: 0 0 10px 10px;
           .titulo-adjuntar {
             padding-left: 40px;
             padding-right: 29px;
+            margin-bottom: 30px;
             .contenedor-titulo {
               margin-bottom: 10px;
               span {
@@ -299,6 +206,9 @@ export default {
                 background-color: #39C5C8;
               }
             }
+          }
+          .content-adjunto {
+            text-align: center;
           }
           .archivo-adjunto {
             margin-bottom: 20px;
