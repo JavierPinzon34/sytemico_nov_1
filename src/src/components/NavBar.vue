@@ -2,7 +2,7 @@
   <div>
     <div class="contenedor-menu-principal">
       <div class="seccion-logotipo">
-        <img src="../assets/imagenes/logotipos/Logo-Grumpyturtle-Blanco.svg" alt="">
+        <img src="../assets/imagenes/logotipos/Logo-Suppmail.svg" alt="">
         <img class="imgagen-wapps" src="../assets/imagenes/iconos/Icon-wapps-pradek-default.svg" alt="">
       </div>
       <!-- menus de navegacion -->

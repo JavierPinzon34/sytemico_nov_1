@@ -25,7 +25,7 @@
             <model-select
               class="select_content"
               :options="options2"
-              v-model="item"
+              v-model="item2"
               placeholder="Estado"
             />
         </div>
@@ -34,7 +34,7 @@
             <model-select
               class="select_content"
               :options="options3"
-              v-model="item"
+              v-model="item3"
               placeholder="Fecha"
             />
         </div>
@@ -73,6 +73,14 @@ export default {
         { value: '2', text: 'Hasta' }
       ],
       item: {
+        value: '',
+        text: ''
+      },
+      item2: {
+        value: '',
+        text: ''
+      },
+      item3: {
         value: '',
         text: ''
       },
