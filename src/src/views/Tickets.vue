@@ -21,7 +21,12 @@
         <CardArea/>
       </b-col>
       <b-col md="9">
-        <CardList/>
+        <div v-if="showCard">
+          <CardList/>
+        </div>
+        <div v-else>
+          <CardTicket/>
+        </div>
       </b-col>
     </b-row>
     <ModalNewTicket/>
@@ -30,6 +35,7 @@
 <script>
 import CardArea from '../components/CardArea'
 import CardList from '../components/CardList'
+import CardTicket from '../components/CardTicket'
 import EventBus from '../bus'
 import ModalNewTicket from '../components/ModalNewTicket'
 /* import { ModelSelect } from 'vue-search-select' */
@@ -38,10 +44,12 @@ export default {
     // ModelSelect
     CardArea,
     CardList,
+    CardTicket,
     ModalNewTicket
   },
   data () {
     return {
+      showCard: false,
       options: [
         { value: '1', text: 'Entidad 1' },
         { value: '2', text: 'Entidad 2' }

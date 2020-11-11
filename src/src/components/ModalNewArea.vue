@@ -64,7 +64,22 @@
         </div>
       </div>
       <div class="boton-crear">
-        <b-button variant="info">Crear</b-button>
+        <b-button variant="info" @click="makeToast()">Crear</b-button>
+        <b-toast id="my-toast" solid no-close-button no-auto-hide>
+          <!-- <template #toast-title>
+            <div class="d-flex flex-grow-1 align-items-baseline">
+              <b-img blank blank-color="#ff5555" class="mr-2" width="12" height="12"></b-img>
+              <strong class="mr-auto">Notice!</strong>
+              <small class="text-muted mr-2">42 seconds ago</small>
+            </div>
+          </template> -->
+          <div class="text-center">
+            <img src="../assets/imagenes/iconos/Disc-feliz.svg" alt="">
+            <div class="title-save"><span>¡Felicidades!</span></div>
+            <div class="text-save"><span>Has creado el área</span><br><strong>Soporte</strong></div>
+          </div>
+          <h2></h2>
+        </b-toast>
       </div>
       <div class="encabezado">
         <button class="boton-cerrar" @click="hideModal()">
@@ -95,6 +110,10 @@ export default {
       } else {
         this.options = true
       }
+    },
+    makeToast () {
+      // this.$bvModal.hide('modal-area')
+      this.$bvToast.show('my-toast')
     }
   },
   created () {
@@ -330,5 +349,38 @@ export default {
         }
       }
     }
+  }
+  .toast-body {
+    padding: 10px 0 0 0;
+    .title-save {
+      margin-top: 30px;
+      margin-bottom: 15px;
+      span {
+        font-size: 12px;
+        color: #354861;
+        font-weight: bold;
+      }
+    }
+    .text-save {
+      margin-bottom: 40px;
+      span {
+        font-size: 12px;
+        color: #354861;
+      }
+      strong {
+        font-size: 12px;
+      }
+    }
+    h2 {
+      background-color: #C6FF2C;
+      height: 4px;
+      width: 90%;
+      margin: unset;
+    }
+  }
+  .b-toaster.b-toaster-top-right .b-toaster-slot {
+    max-width: 180px;
+    top: 63px;
+    right: 10px;
   }
 </style>

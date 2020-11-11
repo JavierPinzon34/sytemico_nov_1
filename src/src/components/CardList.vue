@@ -55,6 +55,7 @@ export default {
   },
   data () {
     return {
+      showcontent: false,
       options1: [
         { value: '1', text: 'Baja' },
         { value: '2', text: 'Media' },

@@ -19,7 +19,7 @@ export default {
 <style lang="scss">
   .card_area {
     .card-area-content {
-      height: 668px;
+      height: 658px;
       border: 1px solid #F4F5F8;
       .card-header {
         background-color: #FFFFFF;
