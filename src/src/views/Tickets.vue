@@ -49,7 +49,7 @@ export default {
   },
   data () {
     return {
-      showCard: false,
+      showCard: true,
       options: [
         { value: '1', text: 'Entidad 1' },
         { value: '2', text: 'Entidad 2' }

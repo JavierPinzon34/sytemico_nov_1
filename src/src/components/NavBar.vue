@@ -14,7 +14,7 @@
             </div>
             <span>Tickets</span>
         </router-link>
-        <button class="boton-opcion opcion-select" v-on:click="verOpcionesMenu" :to="{ name: '/'}">
+        <button class="boton-opcion opcion-select" @click="verOpcionesMenu">
           <div class="icono">
             <img src="../assets/imagenes/iconos/Icon-administrar-default.svg" alt="">
           </div>
@@ -23,12 +23,16 @@
           <div class="contenedor-tooltip"></div>
           <div class="contenedor-opciones">
             <button class="boton-opcion">
-              <img src="../assets/imagenes/iconos/icono-proyectos-azul.svg" alt="">
-              Proyecto
+              <img src="../assets/imagenes/iconos/Icon-admin-usuarios-menu.svg" alt="">
+              Usuarios
             </button>
             <button class="boton-opcion">
-              <img src="../assets/imagenes/iconos/icono-actividades-azul.svg" alt="">
-              Actividades
+              <img src="../assets/imagenes/iconos/Icon-admin-config-menu.svg" alt="">
+              Configuración
+            </button>
+            <button class="boton-opcion">
+              <img src="../assets/imagenes/iconos/Icon-admin-informes-menu.svg" alt="">
+              Informes
             </button>
           </div>
         </button>
@@ -66,7 +70,7 @@
           <button class="boton-opciones" @click="verOpcionesUsuario"></button>
           <div class="contenedor-opciones">
             <button class="boton-opcion" @click="showModalProfile">Perfil</button>
-            <button class="boton-opcion">Salir</button>
+            <!-- <button class="boton-opcion">Salir</button> -->
           </div>
         </div>
     </div>
@@ -271,7 +275,7 @@ export default {
             }
 
             .contenedor-opciones {
-                width: 150px;
+                width: 157px;
                 height: 0px;
                 margin: 0;
                 padding: 0;

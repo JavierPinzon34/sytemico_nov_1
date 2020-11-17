@@ -88,11 +88,11 @@ export default {
       cardContent: [
         { value: '1', text: 'Abierto' },
         { value: '2', text: 'Abierto' },
-        { value: '4', text: 'Pendiente' },
-        { value: '5', text: 'Atrasado' },
-        { value: '6', text: 'Olvidado' },
-        { value: '7', text: 'Cerrado' },
-        { value: '8', text: 'Cerrado ok' }
+        { value: '3', text: 'Pendiente' },
+        { value: '4', text: 'Atrasado' },
+        { value: '5', text: 'Olvidado' },
+        { value: '6', text: 'Cerrado' },
+        { value: '7', text: 'Cerrado ok' }
       ]
     }
   }

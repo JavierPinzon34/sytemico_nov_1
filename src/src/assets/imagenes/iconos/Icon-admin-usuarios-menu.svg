@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+  <defs>
+    <clipPath id="clip-Mesa_de_trabajo_9">
+      <rect width="18" height="18"/>
+    </clipPath>
+  </defs>
+  <g id="Mesa_de_trabajo_9" data-name="Mesa de trabajo – 9" clip-path="url(#clip-Mesa_de_trabajo_9)">
+    <path id="Trazado_10731" data-name="Trazado 10731" d="M6022-2460.364a5.092,5.092,0,0,1,4.926-5.234h5.694a5.094,5.094,0,0,1,4.929,5.234c-.96.85-4.012,1.4-7.776,1.4S6022.96-2459.514,6022-2460.364Zm8.905-2.671a.5.5,0,0,0,.5.5h3a.5.5,0,0,0,.5-.5.5.5,0,0,0-.5-.5h-3A.5.5,0,0,0,6030.906-2463.036Zm-4.776-8.32a3.644,3.644,0,0,1,3.644-3.644,3.644,3.644,0,0,1,3.644,3.644,3.645,3.645,0,0,1-3.644,3.646A3.644,3.644,0,0,1,6026.13-2471.356Z" transform="translate(-6020.8 2475.8)" fill="none" stroke="#099fce" stroke-linecap="round" stroke-width="1"/>
+  </g>
+</svg>

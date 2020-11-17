@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+  <defs>
+    <clipPath id="clip-Mesa_de_trabajo_11">
+      <rect width="18" height="18"/>
+    </clipPath>
+  </defs>
+  <g id="Mesa_de_trabajo_11" data-name="Mesa de trabajo – 11" clip-path="url(#clip-Mesa_de_trabajo_11)">
+    <g id="Grupo_8686" data-name="Grupo 8686" transform="translate(-838.794 -66.115)">
+      <g id="Grupo_6894" data-name="Grupo 6894" transform="translate(840.044 67.115)">
+        <path id="Trazado_2026" data-name="Trazado 2026" d="M47.8,21.819V36.172a.984.984,0,0,1-1.073.858H33.2a.821.821,0,0,1-.9-.717v-14.6A.821.821,0,0,1,33.2,21H46.779A.956.956,0,0,1,47.8,21.819Z" transform="translate(-32.3 -21)" fill="none" stroke="#099fce" stroke-width="1.2"/>
+      </g>
+      <g id="Grupo_8681" data-name="Grupo 8681" transform="translate(842.634 74.529)">
+        <rect id="Rectángulo_2824" data-name="Rectángulo 2824" width="7.797" height="1.128" transform="translate(2.224 0)" fill="#099fce"/>
+        <ellipse id="Elipse_168" data-name="Elipse 168" cx="0.658" cy="0.658" rx="0.658" ry="0.658" transform="translate(0 0)" fill="#099fce"/>
+      </g>
+      <g id="Grupo_8682" data-name="Grupo 8682" transform="translate(842.634 70.768)">
+        <rect id="Rectángulo_2823" data-name="Rectángulo 2823" width="7.797" height="1.128" transform="translate(2.224)" fill="#099fce"/>
+        <ellipse id="Elipse_167" data-name="Elipse 167" cx="0.658" cy="0.658" rx="0.658" ry="0.658" fill="#099fce"/>
+      </g>
+      <g id="Grupo_8680" data-name="Grupo 8680" transform="translate(842.634 78.29)">
+        <rect id="Rectángulo_2825" data-name="Rectángulo 2825" width="7.797" height="1.128" transform="translate(2.224)" fill="#099fce"/>
+        <ellipse id="Elipse_169" data-name="Elipse 169" cx="0.658" cy="0.658" rx="0.658" ry="0.658" fill="#099fce"/>
+      </g>
+    </g>
+  </g>
+</svg>
