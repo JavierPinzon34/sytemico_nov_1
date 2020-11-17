@@ -49,7 +49,7 @@ export default {
   },
   data () {
     return {
-      showCard: true,
+      showCard: false,
       options: [
         { value: '1', text: 'Entidad 1' },
         { value: '2', text: 'Entidad 2' }
@@ -59,6 +59,11 @@ export default {
         text: ''
       }
     }
+  },
+  created () {
+    EventBus.$on('change-show-card', () => {
+      this.showCard = true
+    })
   },
   methods: {
     showModal () { // evento para abrir la modal de nuevo ticket

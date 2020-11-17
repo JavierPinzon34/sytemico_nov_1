@@ -46,6 +46,7 @@
   </div>
 </template>
 <script>
+import EventBus from '../bus'
 import { ModelSelect } from 'vue-search-select'
 import CardListContent from './CardListContent'
 export default {
@@ -85,15 +86,19 @@ export default {
         value: '',
         text: ''
       },
-      cardContent: [
-        { value: '1', text: 'Abierto' },
-        { value: '2', text: 'Abierto' },
-        { value: '3', text: 'Pendiente' },
-        { value: '4', text: 'Atrasado' },
-        { value: '5', text: 'Olvidado' },
-        { value: '6', text: 'Cerrado' },
-        { value: '7', text: 'Cerrado ok' }
-      ]
+      group: [],
+      cardContent: []
+    }
+  },
+  created () {
+    EventBus.$on('change-content-lsit', (item) => {
+      this.cardContent = item.cardContent
+      this.group = item
+    })
+  },
+  methods: {
+    onGroupsChange (e) {
+      console.log({ e })
     }
   }
 }

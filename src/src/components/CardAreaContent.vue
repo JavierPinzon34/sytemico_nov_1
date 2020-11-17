@@ -77,8 +77,12 @@ export default {
     changeInfo (item, numero) {
       item.key = numero
       this.selected = numero
+      EventBus.$emit('change-show-card')
       EventBus.$emit('change-card', (item))
       EventBus.$emit('card-select', (numero))
+      setTimeout(() => {
+        EventBus.$emit('change-content-lsit', (this.item))
+      }, 100)
     }
   }
 }

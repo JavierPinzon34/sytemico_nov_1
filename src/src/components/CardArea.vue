@@ -26,14 +26,102 @@ export default {
   data () {
     return {
       cardContent: [
-        { value: '1', text: 'Soporte', tickets: '100' },
-        { value: '2', text: 'Comercial', tickets: '22' },
-        { value: '4', text: 'Logistica', tickets: '48' },
-        { value: '5', text: 'Contabilidad', tickets: '10' },
-        { value: '6', text: 'Gerencia', tickets: '5' },
-        { value: '7', text: 'Administración', tickets: '34' },
-        { value: '8', text: 'PQRS', tickets: '203' },
-        { value: '8', text: 'Ventas', tickets: '65' }
+        {
+          value: '1',
+          text: 'Soporte',
+          tickets: '100',
+          cardContent: [
+            { value: '1', text: 'Abierto' },
+            { value: '2', text: 'Abierto' },
+            { value: '3', text: 'Pendiente' },
+            { value: '4', text: 'Atrasado' },
+            { value: '5', text: 'Olvidado' },
+            { value: '6', text: 'Cerrado' },
+            { value: '7', text: 'Cerrado ok' }
+          ]
+        },
+        {
+          value: '2',
+          text: 'Comercial',
+          tickets: '22',
+          cardContent: [
+            { value: '1', text: 'Abierto' },
+            { value: '2', text: 'Abierto' },
+            { value: '6', text: 'Cerrado' },
+            { value: '7', text: 'Cerrado ok' }
+          ]
+        },
+        {
+          value: '4',
+          text: 'Logistica',
+          tickets: '48',
+          cardContent: [
+            { value: '6', text: 'Cerrado' },
+            { value: '7', text: 'Cerrado ok' },
+            { value: '1', text: 'Abierto' },
+            { value: '2', text: 'Abierto' }
+          ]
+        },
+        {
+          value: '5',
+          text: 'Contabilidad',
+          tickets: '10',
+          cardContent: [
+            { value: '3', text: 'Pendiente' },
+            { value: '4', text: 'Atrasado' },
+            { value: '5', text: 'Olvidado' },
+            { value: '6', text: 'Cerrado' },
+            { value: '7', text: 'Cerrado ok' }
+          ]
+        },
+        {
+          value: '6',
+          text: 'Gerencia',
+          tickets: '5',
+          cardContent: [
+            { value: '1', text: 'Abierto' },
+            { value: '2', text: 'Abierto' },
+            { value: '3', text: 'Pendiente' },
+            { value: '4', text: 'Atrasado' }
+          ]
+        },
+        {
+          value: '7',
+          text: 'Administración',
+          tickets: '34',
+          cardContent: [
+            { value: '1', text: 'Abierto' },
+            { value: '2', text: 'Abierto' },
+            { value: '4', text: 'Atrasado' },
+            { value: '5', text: 'Olvidado' },
+            { value: '7', text: 'Cerrado ok' }
+          ]
+        },
+        {
+          value: '8',
+          text: 'PQRS',
+          tickets: '203',
+          cardContent: [
+            { value: '1', text: 'Abierto' },
+            { value: '3', text: 'Pendiente' },
+            { value: '4', text: 'Atrasado' },
+            { value: '6', text: 'Cerrado' }
+          ]
+        },
+        {
+          value: '8',
+          text: 'Ventas',
+          tickets: '65',
+          cardContent: [
+            { value: '1', text: 'Abierto' },
+            { value: '2', text: 'Abierto' },
+            { value: '3', text: 'Pendiente' },
+            { value: '4', text: 'Atrasado' },
+            { value: '5', text: 'Olvidado' },
+            { value: '6', text: 'Cerrado' },
+            { value: '7', text: 'Cerrado ok' }
+          ]
+        }
       ]
     }
   }
