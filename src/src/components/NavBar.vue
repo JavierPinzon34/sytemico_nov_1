@@ -14,64 +14,60 @@
             </div>
             <span>Tickets</span>
         </router-link>
-        <button class="boton-opcion opcion-select" @click="verOpcionesMenu">
-          <div class="icono">
-            <img src="../assets/imagenes/iconos/Icon-administrar-default.svg" alt="">
-          </div>
-          <span>Administrar</span>
-          <b-icon icon="caret-down-fill" class="icono-select"></b-icon>
-          <div class="contenedor-tooltip"></div>
-          <div class="contenedor-opciones">
-            <button class="boton-opcion">
-              <img src="../assets/imagenes/iconos/Icon-admin-usuarios-menu.svg" alt="">
-              Usuarios
-            </button>
-            <button class="boton-opcion">
-              <img src="../assets/imagenes/iconos/Icon-admin-config-menu.svg" alt="">
-              Configuración
-            </button>
-            <button class="boton-opcion">
-              <img src="../assets/imagenes/iconos/Icon-admin-informes-menu.svg" alt="">
-              Informes
-            </button>
-          </div>
-        </button>
+        <b-dropdown id="dropdown-1" class="boton-opcion">
+          <template #button-content>
+            <img class="mr-2" src="../assets/imagenes/iconos/Icon-administrar-default.svg" alt="">
+            <span class="mr-1">Administrar </span>
+          </template>
+          <b-dropdown-item>
+            <img class="mr-3" src="../assets/imagenes/iconos/Icon-admin-usuarios-menu.svg" alt="">
+            <span>Usuarios</span>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <img class="mr-3" src="../assets/imagenes/iconos/Icon-admin-config-menu.svg" alt="">
+            <span>Configuración</span>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <img class="mr-3" src="../assets/imagenes/iconos/Icon-admin-informes-menu.svg" alt="">
+            <span>Informes</span>
+          </b-dropdown-item>
+        </b-dropdown>
       </div>
       <div class="seccion-usuario">
         <div class="contenedor-notificaciones">
-          <button class="boton-notificaciones" @click="verNotificacionesUsuario">
-            <img src="../assets/imagenes/iconos/icono-campana.svg" alt="">
-            <div class="numero">2</div>
-          </button>
-          <div class="contenedor-opciones">
-            <button class="boton-opcion">
+          <b-dropdown id="dropdown-1" class="boton-opcion" no-caret>
+            <template #button-content>
+              <img src="../assets/imagenes/iconos/icono-campana.svg" alt="">
+              <b-badge pill variant="danger">2</b-badge>
+            </template>
+            <b-dropdown-item>
               <img src="../assets/imagenes/iconos/icono-disquet-feliz.svg" alt="">
-              ¡Proyecto creado!
-            </button>
-            <button class="boton-opcion">
+              <span>¡Proyecto creado!</span>
+            </b-dropdown-item>
+            <b-dropdown-item>
               <img src="../assets/imagenes/iconos/icono-disquet-feliz.svg" alt="">
-              Programaste una actividad
-            </button>
-            <button class="boton-opcion">
+              <span>Programaste una actividad</span>
+            </b-dropdown-item>
+            <b-dropdown-item>
               <img src="../assets/imagenes/iconos/icono-disquet-triste.svg" alt="">
-              Actividad descartada
-            </button>
-            <button class="boton-opcion">
+              <span>Actividad descartada</span>
+            </b-dropdown-item>
+            <b-dropdown-item>
               <img src="../assets/imagenes/iconos/icono-disquet-triste.svg" alt="">
-              Parqueaste una actividad
-            </button>
-          </div>
+              <span>Parqueaste una actividad</span>
+            </b-dropdown-item>
+          </b-dropdown>
         </div>
         <div class="contenedor-informacion-usuarios">
           <h4>Rebeca Silver</h4>
           <span>revecasilver@mail.com</span>
         </div>
         <div class="contenedor-opciones-usuarios">
-          <button class="boton-opciones" @click="verOpcionesUsuario"></button>
-          <div class="contenedor-opciones">
-            <button class="boton-opcion" @click="showModalProfile">Perfil</button>
-            <!-- <button class="boton-opcion">Salir</button> -->
-          </div>
+          <b-dropdown id="dropdown-1" class="boton-opciones" no-caret>
+            <b-dropdown-item class="boton-opcion" @click="showModalProfile">
+              <span>Perfil</span>
+            </b-dropdown-item>
+          </b-dropdown>
         </div>
     </div>
     <ModalProfile/>
@@ -86,41 +82,6 @@ export default {
     ModalProfile
   },
   methods: {
-    verNotificacionesUsuario: function () {
-      // console.log('hola')
-      var opciones = event.target.nextElementSibling
-      var alto = opciones.children.length * 45
-      console.log(opciones)
-
-      if (opciones.clientHeight === 0) {
-        opciones.style.height = alto + 'px'
-      } else {
-        opciones.removeAttribute('style')
-      }
-    },
-    verOpcionesUsuario: function () {
-      var opciones = event.target.nextElementSibling
-      var alto = opciones.children.length * 45
-
-      if (opciones.clientHeight === 0) {
-        opciones.style.height = alto + 'px'
-      } else {
-        opciones.removeAttribute('style')
-      }
-    },
-    verOpcionesMenu: function () {
-      var opciones = event.target.children[4]
-      var tooltip = event.target.children[3]
-      var alto = opciones.children.length * 45
-
-      if (opciones.clientHeight === 0) {
-        opciones.style.height = alto + 'px'
-        tooltip.style.opacity = 0
-      } else {
-        opciones.removeAttribute('style')
-        tooltip.removeAttribute('style')
-      }
-    },
     showModalProfile () {
       EventBus.$emit('show-modal-profile')
     }
@@ -165,6 +126,32 @@ export default {
         background: transparent;
         display: flex;
         justify-content: center;
+
+        ul {
+          top: 9px !important;
+          left: -21px !important;
+          padding: unset;
+          width: 186px;
+          height: 153px;
+          li {
+            height: 50px;
+            width: 100%;
+            vertical-align: .100em;
+            .dropdown-item {
+              height: 50px;
+              padding-top: 14px;
+              padding-bottom: 14px;
+              span {
+                color: #464E5A;
+                font-size: 14px;
+                font-weight: 600;
+              }
+              &:active {
+                background-color: #F5F9FF;
+              }
+            }
+          }
+        }
 
         .boton-opcion {
             width: auto;
@@ -228,6 +215,18 @@ export default {
 
             &:hover {
                 background-color: #24303D;
+            }
+
+            .btn {
+              background-color: transparent;
+              border: unset;
+              &::after {
+                vertical-align: .100em;
+              }
+              &:focus {
+                border: unset;
+                box-shadow: unset;
+              }
             }
         }
 
@@ -397,53 +396,100 @@ export default {
           }
         }
 
-      .contenedor-opciones {
-        width: 250px;
-        height: 0px;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        border-radius: 10px;
-        background: transparent;
-        box-shadow: 0px 3px 6px #00000029;
-        overflow: hidden;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        z-index: 100;
-        transition: all 0.3s;
-
-        .boton-opcion {
-          width: 100%;
-          height: 45px;
+        .contenedor-opciones {
+          width: 250px;
+          height: 0px;
           margin: 0;
-          padding: 0 0 0 20px;
+          padding: 0;
           border: 0;
-          border-radius: 0;
-          background-color: #FFFFFF;
-          font-family: 'Mulish', sans-serif;
-          font-size: 15px;
-          font-weight: 600;
-          color: #484848;
-          display: flex;
-          align-items: center;
+          border-radius: 10px;
+          background: transparent;
+          box-shadow: 0px 3px 6px #00000029;
+          overflow: hidden;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          z-index: 100;
           transition: all 0.3s;
 
-          img {
-            width: 18px;
-            height: 15px;
-            margin: 0 10px 0 0;
-            padding: 0;
+          .boton-opcion {
+            width: 100%;
+            height: 45px;
+            margin: 0;
+            padding: 0 0 0 20px;
             border: 0;
             border-radius: 0;
-            background: transparent;
-          }
+            background-color: #FFFFFF;
+            font-family: 'Mulish', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: #484848;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s;
 
-          &:hover {
-            background-color: #F2F3F9;
+            img {
+              width: 18px;
+              height: 15px;
+              margin: 0 10px 0 0;
+              padding: 0;
+              border: 0;
+              border-radius: 0;
+              background: transparent;
+            }
+
+            &:hover {
+              background-color: #F2F3F9;
+            }
           }
         }
-      }
+        .btn {
+          background-color: transparent;
+          border: unset;
+          .badge {
+            top: 6px;
+            left: -6px;
+            font-size: 9px;
+          }
+          &:focus {
+            box-shadow: unset;
+          }
+        }
+        ul {
+          top: 9px !important;
+          left: -235px !important;
+          padding: unset;
+          width: 260px;
+          height: 203px;
+          transition: all 0.5s;
+          li {
+            height: 50px;
+            width: 100%;
+            vertical-align: .100em;
+            .dropdown-item {
+              height: 50px;
+              padding-top: 14px;
+              padding-bottom: 14px;
+              span {
+                color: #464E5A;
+                font-size: 14px;
+                font-weight: 600;
+              }
+              &:active {
+                background-color: #F5F9FF;
+              }
+            }
+            img {
+              width: 18px;
+              height: 15px;
+              margin: 0 10px 0 0;
+              padding: 0;
+              border: 0;
+              border-radius: 0;
+              background: transparent;
+            }
+          }
+        }
       }
 
       .contenedor-informacion-usuarios {
@@ -500,14 +546,49 @@ export default {
         position: relative;
 
         .boton-opciones {
-            width: 36px;
-            min-width: 36px;
-            height: 36px;
-            margin: 0;
-            padding: 0;
-            border: 0;
+          width: 36px;
+          min-width: 36px;
+          height: 36px;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          border-radius: 50%;
+
+          .btn {
             border-radius: 50%;
             background-color: #FFFFFF;
+            &:focus {
+              box-shadow: unset;
+            }
+          }
+          ul {
+            top: 5px !important;
+            left: -30px !important;
+            padding: unset;
+            height: 43px;
+            min-width: 20px;
+            width: 110px;
+            li {
+              height: 42px;
+              vertical-align: .100em;
+              .dropdown-item {
+                height: 40px;
+                padding-top: 9px;
+                padding-bottom: 9px;
+                span {
+                  color: #464E5A;
+                  font-size: 14px;
+                  font-weight: 600;
+                }
+                &:active {
+                  background-color: #F5F9FF;
+                }
+                &:hover {
+                  border-radius: 10px;
+                }
+              }
+            }
+          }
         }
 
         .contenedor-opciones {

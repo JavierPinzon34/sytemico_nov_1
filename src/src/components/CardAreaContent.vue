@@ -11,23 +11,23 @@
             <span>{{ item.tickets }}</span>
           </b-badge>
           <!-- boton de puntos del lado derecho -->
-          <button class="boton-opciones" @click="verOpcionesProyecto">
+          <b-dropdown id="dropdown-1" no-caret>
+            <template #button-content>
               <img src="../assets/imagenes/iconos/icono-opciones-gris.svg" alt="">
-          </button>
-          <div class="contenedor-opciones">
-            <button class="boton-opcion">
+            </template>
+            <b-dropdown-item>
               <img src="../assets/imagenes/iconos/icono-lapiz.svg" alt="">
-              Editar
-            </button>
-            <button class="boton-opcion">
+              <span>Editar</span>
+            </b-dropdown-item>
+            <b-dropdown-item>
               <img src="../assets/imagenes/iconos/icono-archivar.svg" alt="">
-              Archivar
-            </button>
-            <button class="boton-opcion">
+              <span>Archivar</span>
+            </b-dropdown-item>
+            <b-dropdown-item>
               <img src="../assets/imagenes/iconos/icono-caneca.svg" alt="">
-              Eliminar
-            </button>
-          </div>
+              <span>Eliminar</span>
+            </b-dropdown-item>
+          </b-dropdown>
         </b-card-text>
       </b-col>
     </b-row>
@@ -182,10 +182,60 @@ export default {
             }
           }
         }
+        .btn {
+          background-color: transparent;
+          border: unset;
+          padding: 0;
+          margin: 0;
+          &:focus {
+            box-shadow: unset;
+          }
+        }
+        ul {
+          top: 3px !important;
+          left: -140px !important;
+          padding: unset;
+          min-width: 20px;
+          width: 140px;
+          height: 153px;
+          transition: all 0.5s;
+          li {
+            height: 50px;
+            width: 100%;
+            vertical-align: .100em;
+            .dropdown-item {
+              height: 50px;
+              padding-top: 14px;
+              padding-bottom: 14px;
+              span {
+                color: #464E5A;
+                font-size: 14px;
+                font-weight: 600;
+              }
+              &:active {
+                background-color: #F5F9FF;
+              }
+            }
+            img {
+              width: 18px;
+              height: 15px;
+              margin: 0 10px 0 0;
+              padding: 0;
+              border: 0;
+              border-radius: 0;
+              background: transparent;
+            }
+          }
+        }
       }
     }
     .col {
       padding-right: 5px;
+    }
+    &:hover {
+      border: 1px solid #0094D1;
+      background-color: #F5F9FF;
+      cursor: pointer;
     }
   }
   .is-active {
