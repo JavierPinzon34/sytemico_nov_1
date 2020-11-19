@@ -7,21 +7,26 @@
             <span><img src="../assets/imagenes/iconos/Icon-col-areas.svg" alt=""> Área</span>
           </b-col>
           <b-col class="content-button">
-            <button class="boton-opciones">
-              <img src="../assets/imagenes/iconos/nueva-area.svg" alt="">
+            <button class="boton-opciones" @click="showModalArea">
+              <img class="img-top" src="../assets/imagenes/iconos/nueva-area.svg" alt="">
+              <img class="img-down" src="../assets/imagenes/iconos/nueva-area-activo.svg" alt="">
             </button>
           </b-col>
         </b-row>
       </template>
       <CardAreaContent class="mb-2" v-for="(item, index) in cardContent" :item="item" :key="index" :numero="index"/>
     </b-card>
+    <ModalArea/>
   </div>
 </template>
 <script>
 import CardAreaContent from './CardAreaContent'
+import ModalArea from '../components/ModalNewArea'
+import EventBus from '../bus'
 export default {
   components: {
-    CardAreaContent
+    CardAreaContent,
+    ModalArea
   },
   data () {
     return {
@@ -124,13 +129,17 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    showModalArea () {
+      EventBus.$emit('show-modal-area')
+    }
   }
 }
 </script>
 <style lang="scss">
   .card_area {
     .card-area-content {
-      height: 658px;
       border: 1px solid #F4F5F8;
       .card-header {
         background-color: #FFFFFF;
@@ -142,7 +151,7 @@ export default {
           font-weight: 700;
         }
         img {
-          margin-right: 30px;
+          //margin-right: 30px;
           color: #006DA7;
         }
         .content-button {
@@ -153,17 +162,20 @@ export default {
             margin: 0;
             padding: 0;
             border: unset;
-            border-radius: 50%;
+            //border-radius: 50%;
             background: transparent;
-            img {
-              width: auto;
-              height: auto;
-              margin: 0;
-              padding: 0;
-              border: 0;
-              border-radius: 0;
-              background: transparent;
-              pointer-events: none;
+            .img-top {
+              position: absolute;
+              z-index: 999;
+            }
+            .img-down {
+              width: 24px;
+              height: 24px;
+            }
+            &:hover {
+              .img-top{
+                display: none;
+              }
             }
           }
         }

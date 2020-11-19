@@ -1,5 +1,5 @@
 <template>
- <b-modal id="modal-area" title="BootstrapVue" size="md" hide-footer hide-header>
+ <b-modal id="modal-area" title="BootstrapVue" size="md" hide-footer hide-header centered>
    <!-- modal para crear nuevo ticket -->
     <div class="contenido-modal-area">
       <div class="contenido-header">
@@ -61,6 +61,10 @@
               v-model="asunto2"
               />
           </b-form-group>
+          <button class="boton-opciones">
+            <img class="img-top" src="../assets/imagenes/iconos/nueva-area.svg" alt="">
+            <img class="img-down" src="../assets/imagenes/iconos/nueva-area-activo.svg" alt="">
+          </button>
         </div>
       </div>
       <div class="boton-crear">
@@ -171,10 +175,10 @@ export default {
             margin-top: 15px;
             margin-bottom: 25px;
             .form-group {
+              margin-bottom: unset;
               label {
                 font-size: 12px;
                 color: #00BABE;
-                margin-bottom: 4px;
               }
               input {
                 height: 40px;
@@ -184,7 +188,6 @@ export default {
                   border: 2px solid #00B8BD;
                 }
               }
-
             }
           }
         }
@@ -278,6 +281,28 @@ export default {
                   box-shadow: unset;
                   // box-shadow:0 0 5px #00B8BD; sirve para haceruna sombra
                   border: 2px solid #00B8BD;
+                }
+              }
+            }
+            .boton-opciones {
+              width: 25px;
+              height: 25px;
+              margin: 0;
+              padding: 0;
+              border: unset;
+              border-radius: 50%;
+              background: transparent;
+              .img-top {
+                position: absolute;
+                z-index: 999;
+              }
+              .img-down {
+                width: 25px;
+                height: 25px;
+              }
+              &:hover {
+                .img-top{
+                  display: none;
                 }
               }
             }

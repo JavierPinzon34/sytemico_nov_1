@@ -1,5 +1,5 @@
 <template>
- <b-modal id="modal-profile" title="BootstrapVue" size="md" hide-footer hide-header>
+ <b-modal id="modal-profile" title="BootstrapVue" size="md" hide-footer hide-header centered>
    <!-- modal para crear nuevo ticket -->
     <div class="contenido-modal">
       <div class="contenido-header">

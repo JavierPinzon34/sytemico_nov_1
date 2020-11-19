@@ -1,13 +1,11 @@
 <template>
-  <div class="footer_component">
+  <footer class="footer_component">
     <span>Lee nuestra Política de Privacidad y Términos de Uso. Designed, Developed and Built  by  <strong>Systemico®</strong></span>
-  </div>
+  </footer>
 </template>
 <style lang="scss">
   .footer_component {
     background-color: #F8F9FC;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     height: 32px;
     color: #AEB2B7;

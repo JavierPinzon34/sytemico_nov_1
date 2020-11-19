@@ -13,7 +13,12 @@
         <p class="descripcion-proyecto"><b-badge pill variant="light"><b-icon-paperclip scale="1.5"/> <span>2</span></b-badge> Hola, es necesario dar respuesta al cliente debido a que ya se …</p>
       </div>
       <div class="contenedor-prioridad">
-        <span>Alta</span>
+        <model-select
+          class="select_content"
+          :options="options"
+          v-model="item2"
+          placeholder="Seleccionar"
+        />
       </div>
       <div class="contenedor-estado">
         <div class="estado">
@@ -35,6 +40,7 @@
   </div>
 </template>
 <script>
+import { ModelSelect } from 'vue-search-select'
 export default {
   props: {
     item: {
@@ -44,6 +50,19 @@ export default {
     numero: {
       type: Number,
       default: () => 0
+    }
+  },
+  components: {
+    ModelSelect
+  },
+  data () {
+    return {
+      item2: '',
+      options: [
+        { value: '1', text: 'Baja' },
+        { value: '2', text: 'Media' },
+        { value: '3', text: 'Alta' }
+      ]
     }
   }
 }

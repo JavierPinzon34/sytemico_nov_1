@@ -13,7 +13,7 @@
       </b-col>
       <!-- Boton crear nuevo ticket -->
       <b-col md="4" class="text-right">
-        <b-button variant="outline-info" @click="showModal()">Nuevo ticket</b-button>
+        <b-button variant="outline-info" @click="showModal">Nuevo ticket</b-button>
       </b-col>
     </b-row>
     <b-row class="mt-3">
@@ -76,6 +76,7 @@ export default {
   .tickets {
     background-color: #F8F9FC;
     padding: 15px;
+    padding-bottom: unset;
     min-height: 658px;
     .search_tickets{
       // clases para el encabezado de la pagina

@@ -28,16 +28,28 @@
               <span>puedes crear un ticket y asignarlo</span>
             </div>
             <div>
-              <b-button>Nuevo ticket</b-button>
+              <b-button @click="showModal">Nuevo ticket</b-button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <ModalNewTicket/>
   </div>
 </template>
 <script>
-export default {}
+import EventBus from '../bus'
+import ModalNewTicket from '../components/ModalNewTicket'
+export default {
+  components: {
+    ModalNewTicket
+  },
+  methods: {
+    showModal () { // evento para abrir la modal de nuevo ticket
+      EventBus.$emit('show-modal')
+    }
+  }
+}
 </script>
 <style lang="scss">
   .card_ticket {
@@ -167,7 +179,7 @@ export default {}
       }
     }
     .body-tickets {
-      height: 611px;
+      height: 580px;
       display: flex;
       align-content: center;
       align-items: center;

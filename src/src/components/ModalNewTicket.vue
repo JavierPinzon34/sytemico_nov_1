@@ -1,5 +1,5 @@
 <template>
- <b-modal id="modal-1" title="BootstrapVue" size="lg" hide-footer hide-header>
+ <b-modal id="modal-1" title="BootstrapVue" size="lg" hide-footer hide-header centered>
    <!-- modal para crear nuevo ticket -->
     <div class="contenido-modal">
       <div class="contenido-header">
@@ -62,7 +62,8 @@
               <span>Adjuntar archivo</span>
             </b-col>
             <b-col md="6" class="text-right">
-              <b-button variant="outline-info">Adjuntar</b-button>
+              <b-form-file id="selectedFile" v-model="file" class="mt-3" plain style="display: none;"></b-form-file>
+              <b-button variant="outline-info" onclick="document.getElementById('selectedFile').click();">Adjuntar</b-button>
             </b-col>
           </b-row>
           <b-progress :value="value" max="100" class="mb-3"></b-progress>
@@ -97,6 +98,7 @@ export default {
   },
   data () {
     return {
+      file: [],
       name: '',
       email: '',
       text: 'Hola, es necesario dar respuesta al cliente debido a',

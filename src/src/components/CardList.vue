@@ -13,30 +13,25 @@
         </div>
         <div class="text_prioridad">
           <!-- Buscador Prioridad-->
-            <model-select
-              class="select_content"
-              :options="options1"
-              v-model="item"
-              placeholder="Prioridad"
-            />
+          <span>Prioridad</span>
         </div>
         <div class="text_estado">
           <!-- Buscador Estado-->
-            <model-select
-              class="select_content"
-              :options="options2"
-              v-model="item2"
-              placeholder="Estado"
-            />
+          <model-select
+            class="select_content"
+            :options="options2"
+            v-model="item2"
+            placeholder="Estado"
+          />
         </div>
         <div class="text_fecha">
           <!-- Buscador Fecha-->
-            <model-select
-              class="select_content"
-              :options="options3"
-              v-model="item3"
-              placeholder="Fecha"
-            />
+          <model-select
+            class="select_content"
+            :options="options3"
+            v-model="item3"
+            placeholder="Fecha"
+          />
         </div>
       </div>
       <div>
@@ -57,11 +52,6 @@ export default {
   data () {
     return {
       showcontent: false,
-      options1: [
-        { value: '1', text: 'Baja' },
-        { value: '2', text: 'Media' },
-        { value: '3', text: 'Alta' }
-      ],
       options2: [
         { value: '1', text: 'Abierto' },
         { value: '2', text: 'Pendiente' },
