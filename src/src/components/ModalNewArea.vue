@@ -293,12 +293,14 @@ export default {
               border-radius: 50%;
               background: transparent;
               .img-top {
+                width: 25px;
+                height: 29px;
                 position: absolute;
                 z-index: 999;
               }
               .img-down {
-                width: 25px;
-                height: 25px;
+                width: 24px;
+                height: 24px;
               }
               &:hover {
                 .img-top{

@@ -80,9 +80,9 @@ export default {
     border-radius: 0;
     background: transparent;
     display: flex;
+    cursor: pointer;
     .barra-lateral {
       width: 20px;
-      height: 80px;
       margin: 0;
       padding: 0;
       border: 0;
@@ -103,7 +103,7 @@ export default {
     }
     .codigo-proyecto {
       width: 55px;
-      height: 80px;
+      height: 78px;
       margin: 0;
       padding: 0;
       border: 0;
@@ -119,7 +119,6 @@ export default {
     }
     .contenedor-descripcion {
       width: 450px;
-      height: 80px;
       margin: 0;
       padding: 10px 5px;
       border: 0;
@@ -176,7 +175,6 @@ export default {
     }
     .contenedor-prioridad {
       width: 135px;
-      height: 80px;
       margin: 0;
       padding: 0;
       border: 0;
@@ -193,7 +191,6 @@ export default {
     .contenedor-estado {
       width: 134px;
       min-width: 134px;
-      height: 80px;
       margin: 0;
       padding: 0;
       border: 0;
@@ -259,7 +256,6 @@ export default {
     .contenedor-fecha {
       width: 134px;
       min-width: 134px;
-      height: 80px;
       margin: 0;
       padding: 0;
       border: 0;
@@ -335,6 +331,9 @@ export default {
         }
       }
     }
+    &:hover {
+      border: 1px solid #0291EB;
+    }
   }
 
   // colores fila
@@ -358,6 +357,9 @@ export default {
         }
       }
     }
+    &:hover {
+      border: 1px solid #EB3637;
+    }
   }
   .fila-proyecto.fila-amarilla {
     .barra-lateral {
@@ -379,6 +381,9 @@ export default {
         }
       }
     }
+    &:hover {
+      border: 1px solid #FCA213;
+    }
   }
   .fila-proyecto.fila-tinto {
     .barra-lateral {
@@ -399,6 +404,9 @@ export default {
           }
         }
       }
+    }
+    &:hover {
+      border: 1px solid #740000;
     }
   }
   .fila-proyecto.fila-morado {
@@ -470,6 +478,9 @@ export default {
         }
       }
     }
+    &:hover {
+      border: 1px solid #6C2CFD;
+    }
   }
   .fila-proyecto.fila-verde {
     .barra-lateral {
@@ -539,6 +550,9 @@ export default {
           }
         }
       }
+    }
+    &:hover {
+      border: 1px solid #01CC19;
     }
   }
 }
